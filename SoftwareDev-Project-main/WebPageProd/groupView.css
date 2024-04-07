@@ -1,0 +1,1738 @@
+html{
+    background: #00060b;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'figtree', sans-serif;
+}
+
+.imgnav{
+    display: flex;
+    align-items: center;
+}
+
+.snav{
+    margin: 0 25px;
+    border-radius: 10px;
+    /*background: #8e0ce3;*/
+    /*background: linear-gradient(0deg, #1a1a1a, #8e0ce3);*/
+    background: linear-gradient(0deg, #451ded, #8e0ce3);
+    padding: 15px 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/*#searchResults{
+    margin: 0 auto;
+    position: relative;
+    left: 45%;
+}*/
+
+#searchResults {
+    position: relative;
+    left: 35%;
+    margin: 0 auto;
+    width: 30%; /* Adjust the width as necessary */
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Allow scrolling within the container */
+    position: absolute;
+    z-index: 1000; /* Ensure it's above other content */
+    background: #ffffff; /* Choose a background color that fits the theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    font-family: 'Arial', sans-serif; /* Modern, readable font */
+}
+
+#searchResults div {
+    padding: 10px 15px; /* Spacing inside each result */
+    border-bottom: 1px solid #f0f0f0; /* Separator between results */
+    cursor: pointer; /* Indicates the item is clickable */
+    background-color: #8e0ce3;
+}
+
+#searchResults div a{
+    text-decoration: none;
+    color: black;
+}
+
+#searchResults div:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+#searchResults div:hover {
+    background-color: #f8f8f8; /* Highlight on hover */
+}
+
+
+.searchnav {
+    position: relative;
+    margin: 10px auto;
+    max-width: 400px;
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.searchnav input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Franklin Gothic', sans-serif;
+}
+
+.searchnav button {
+    position: absolute;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#searchBtn {
+    right: 2px;
+    width: 40px;
+    height: 32px;
+    color: #fbffff;
+   /* background: #000;*/
+    background: transparent;
+    border-radius: 50%;
+}
+#searchBtn {
+    color: #8e0ce3;
+}
+
+#clearBtn {
+    right: -50px;
+    background: #fbffff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+
+}
+
+#clearBtn i {
+    /*color: #fbffff;*/
+    color: #8e0ce3;
+}
+
+.mainnav{
+    margin: 15px 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid white ; /*want to remove this from login and signup pages, gotta figure that out somehow*/
+}
+
+.navigation{
+    height: 20%;
+}
+
+.mainnav .navi a{
+
+    color: #fcfcfb;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.5 ease-in-out;
+}
+
+.mainnav .navi a:hover{
+    border-bottom: 2px solid #8e0ce3;
+}
+
+.mainnav .navi button{
+    color: #fcfcfb;
+    margin: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.mainnav .imgnav img{
+    width: 125px;
+    height: 125px;
+}
+
+.groupviewDashboard {
+    display: flex;
+    /* justify-content: space-between; */
+    position: relative;
+    left: 30px;
+}
+
+/* .memberContainer {
+    width: 20%;
+    background-color: #fff;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+} */
+
+.groupViewMain {
+    width: 1000px;
+    margin: 20px;
+    background-color: #0a0c1b;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.inputfilesec{
+    display: flex;
+}
+
+.addFile{
+    /* border-bottom: 1px solid #ddd; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.inputfilesec input[type="submit"]{
+    color: #fff;
+    /* margin-top: 10px; */
+    width: 265px;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    position: relative;
+    right: 60px;
+}
+
+.addFile button a{
+    color: white;
+    text-align: center;
+    padding: 5px 5px; /* Padding to adjust the size */
+    text-decoration: none; /* No underline on links */
+    font-size: 17px; /* Font size for links */
+}
+
+.addFile input, .addFile label{
+    position: relative;
+    right: 20px;
+}
+
+.addFile input{
+    margin-left: 20px;
+}
+
+.filesSection {
+    margin-top: 0px;
+}
+
+.filesSection nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    /* background-color: #eaeaea; */
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    margin-bottom: 10px;
+}
+
+.fileSecEach .fileNameEach, .fileSecEach .lastChangedbyEach, .fileSecEach .dateChangedEach, .fileSecEach .removeFileEach{
+    position: relative;
+}
+
+.fileSecEach .fileNameEach{
+    right: 20px;
+}
+.fileSecEach .dateChangedEach, .fileSecEach .removeFileEach{
+    right: 80px;
+}
+.fileSecEach .lastChangedbyEach{
+    position: relative;
+    right: 90px;
+}
+
+.fileSecEach .removeFileEach{
+    right: 50px;
+}
+
+.fileIcon {
+    margin-right: 10px;
+}
+
+.dateChanged{
+    position: relative;
+    left: 25px;
+}
+.removeFile{
+    position: relative;
+    left: 15px;
+}
+.lastChangedby{
+    position: relative;
+    left: 30px;
+}
+  
+/* .fileName, .lastChangedby, .dateChanged {
+    flex: 1;
+} */
+
+.padSec {
+    display: flex;
+    flex-direction: column;
+}
+
+.padSecEach {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 35px;
+    border-bottom: 1px solid #ddd;
+}
+.padSecEach a {
+    align-self: flex-start;
+    text-decoration: none;
+}
+  
+  /* File section list */
+.fileSecEach {
+    display: flex;
+    align-items: center;
+    padding: 10px 35px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+  
+.fileIconEach {
+    margin-right: 10px;
+}
+
+.fileNameEach{
+    width: 200px;
+}
+
+.fileIconEach i {
+    font-size: 24px;
+    color: #ffa500;
+    margin-right: 10px;
+    position: relative;
+    left: 5px;
+}
+
+.groupSections {
+    background-color: transparent;
+    /* border-bottom: 5px solid white; */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    width: 1040px;
+    position: relative;
+    left: 20px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.groupSections a {
+    float: left; /* Align links side by side */
+    color: white; /* White text color */
+    text-align: center;
+    padding: 14px 16px; /* Padding to adjust the size */
+    text-decoration: none; /* No underline on links */
+    font-size: 17px; /* Font size for links */
+}
+
+.groupSections a:hover {
+    border-bottom: 2px solid #8e0ce3;
+}
+
+.groupSections a.active {
+    background-color: #4CAF50; /* Add a green color for the active/current link */
+    color: white;
+}
+
+.groupSections button {
+    color: #fcfcfb;
+    margin: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.groupSections button:hover {
+    background-color: #9575CD; /* Lighter purple on hover */
+}
+
+
+.leaveGroupBut, .joinGroupBut{
+    width: 100%;
+}
+
+.leaveGroupBut, .deleteGroupBut{
+    background: linear-gradient(150deg, #FF073A, #FF3131);
+}
+
+.deleteGroupBut{
+    width: 30%;
+}
+
+.leaveGroupBut, .deleteGroupBut, .joinGroupBut{
+    color: #fcfcfb;
+    margin: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    /* width: 100%; */
+    /* background: linear-gradient(150deg, #FF073A, #FF3131); */
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    border-color: #8e0ce3;
+    margin-bottom: 20px;
+}
+
+.joinGroupBut{
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+}
+
+.leaveGroupBut a, .deleteGroupBut a, .joinGroupBut a{
+    color: white; /* White text color */
+    text-align: center;
+    padding: 5px 5px; /* Padding to adjust the size */
+    text-decoration: none; /* No underline on links */
+    font-size: 17px;
+}
+
+.memberContainer {
+    background-color: #0a0c1b; /* Light grey background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.groupTitle h1 {
+    color: white;
+    font-size: 24px; /* Adjust font size as necessary */
+    margin: 0;
+    padding: 10px 0px; /* Add some padding */
+    white-space: nowrap; /* Keeps the text on a single line */
+    overflow: hidden; /* Ensures the overflow is hidden */
+    text-overflow: ellipsis; /* Adds an ellipsis to represent clipped text */
+    width: 100%; /* Makes the h1 take up the full width of its container */
+}
+
+  .memSearch {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    position: relative; /* Allows absolute positioning inside */
+    margin-bottom: 20px;
+  }
+  
+  .memSearch input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px; /* Adjust padding as necessary */
+    width: 295px; /* Adjust width considering button size */
+    margin-right: -40px; /* Overlap the button over the input */
+  }
+  
+  .memSearch button {
+    background-color: #5d5d5d; /* Adjust to your theme color */
+    border: none; /* Removes border */
+    border-radius: 50%; /* Circle shape */
+    cursor: pointer;
+    color: #fff; /* Icon color */
+    padding: 0px; /* Adjusts padding */
+    position: absolute; /* Positioned absolutely */
+    right: 5px; /* Distance from the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+  
+  .memSearch button i.fa {
+    position: relative; /* Center icon inside the button */
+  }
+  
+  .memSearch button:focus,
+  .memSearch input[type="text"]:focus {
+    outline: none; /* Removes focus outline */
+  }
+  
+  /* You can add hover effects as needed */
+  .memSearch button:hover {
+    background-color: #777;
+  }
+  
+  
+  .members h2 {
+    color: #fff; /* Dark grey color */
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .members h2:hover{
+    border-bottom: 2px solid #8e0ce3;
+  }
+  
+  .member {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .member:hover {
+    background-color: #8e0ce3; /* Light grey on hover */
+    color: #fff;
+}
+
+
+.groupViewMain2 {
+    width: 1000px;
+    margin: 20px;
+    background-color: #0a0c1b;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#editProfileForm, #createImagePost, #createTextPost, #createAClog {
+    background-color:#0a0c1b;
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 78%;
+    border: 5px solid white;
+    display: none; /* Hidden by default */
+}
+
+#createImagePost label, #createTextPost label, #createAClog #label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#createImagePost input[type="file"], #createImagePost input[type="text"], #createImagePost textarea,
+#createTextPost input[type="file"], #createTextPost input[type="text"], #createTextPost textarea,
+#createAClog input[type="file"], #createAClog input[type="text"], #createAClog textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #000;
+}
+
+#createTextPost input[type="submit"], #createImagePost input[type="submit"], #createAClog input[type="submit"] {
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#createTextPost input[type="submit"]:hover, #createImagePost input[type="submit"]:hover, #createAClog input[type="submit"]:hover {
+    background-color: #3f51b5;
+}
+
+.otherbutton{
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    color: white;
+    padding: 5px 10px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+
+.feedContainer
+{
+    width: 90%;
+    height: 77%;
+    border-radius: 10px;
+    margin:auto;
+    overflow-y:scroll;
+}
+
+.feedItem
+{
+    width:100%;
+    height:500px;
+    border:5px solid white;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    background:#0a0c1b;
+    display:flex;
+}
+
+.commentsContainer
+{
+    width: 250px;
+    height: 100%;
+    border-right: 5px solid white;
+    background:rgba(211, 211, 211, 0.829);
+    flex-shrink: 0;
+}
+
+.commentsHeader
+{
+    text-align:center;
+    padding-top: 10px;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size: 20px;
+    padding-bottom:5px;
+}
+
+.commentsScrollBox
+{
+    width: 95%;
+    height: 80%;
+    border-radius:5px;
+    margin-top:20px;
+    background:lightgrey;
+    margin:auto;
+    padding-top: 5px;
+    overflow-y:scroll;
+}
+
+.comment
+{
+    color: #000;
+    margin:auto;
+    width:95%;
+    height:fit-content;
+    border-radius:5px;
+    background:white;
+    font-size:15px;
+}
+
+.messageInput
+{
+    height:30px;
+    width: 70%;
+    margin:auto;
+    font-size: 15px;
+    margin-left:5px;
+    border-radius:5px;
+    
+}
+
+.sendCommentButton
+{
+    height: 30px;
+    width:60px;
+    margin-left:5px;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.messageInputContainer
+{
+    margin-top:10px;
+}
+
+.commentInfo
+{
+    margin-top:10px;
+    display:flex;
+}
+
+.commentAvatar
+{
+    height:20px;
+    width:15px;
+    margin-bottom:5px;
+    margin-left:5px;
+}
+
+.commentUsername
+{
+    font-size: 13px;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:10px;
+    font-weight:bold;
+}
+
+.postContent
+{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.postImage
+{
+    object-fit:cover;
+    margin:auto;
+    /* flex: 1 1 1;
+    order:1; */
+    height:60%;
+}
+
+.postText
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size:30px;
+    color:white;
+    margin:auto;
+    flex: 1 1 1;
+    height:auto;
+    width:100%;
+    order:1;
+    text-align:center;
+}
+
+.postTextContainer
+{
+    height:75%;
+    width:100%;
+    display:flex;
+    align-items:middle;
+}
+
+.posterInfo {
+    color: #fff;
+    border-top: 5px solid white;
+    background: #0a0c1b;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* Add this to space out children elements */
+}
+
+.postInfoUsernameAvatar {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    /* Control the size and margin as needed, removed fixed height and width */
+}
+
+.posterAvatar {
+    height: 60px; /* Adjust size as needed */
+    object-fit: cover;
+    object-position: 50% 25%;
+    width: 60px;
+    margin-right: 10px; /* Add margin to separate from username */
+    border-radius: 50%; /* To make it round */
+}
+
+.posterUsername {
+    color: white;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.postCaption {
+    flex-grow: 1; /* This allows it to grow and shrink as needed */
+    padding: 0 15px; /* Add padding on the sides */
+    position: relative;
+    left: 10%;
+    width: 20%;
+}
+
+.postCaptionText {
+    font-size: 14px; /* Adjust font size as needed */
+    color: white;
+    text-align: left; /* Align to the left */
+}
+
+.DateLikeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns items */
+    width: 12%;
+    position: relative;
+    bottom: 20px;
+}
+
+.postDate {
+    /* Removed float, used flexbox for positioning */
+    margin-bottom: 5px; /* Add margin between date and button */
+}
+
+.likeButton {
+    padding: 5px 10px; /* Adjust padding as needed */
+    background-color: #4CAF50; /* Adjust to your desired color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Add more styles as needed */
+}
+
+
+
+.activity-log {
+    background-color: #0a0c1b;
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    left: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .activity-log th, .activity-log td {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .activity-log th {
+    /* background-color: #4CAF50; */
+    /* background: linear-gradient(150deg, #451ded, #8e0ce3); */
+    background-color: #8e0ce3;
+    color: white;
+  }
+  /* .activity-log tr:nth-child(even) {
+    background-color: #f2f2f2;
+  } */
+
+.activity-log tr {
+    background-color: #0a0c1b;
+    color: #fff;
+}
+
+.activity-log tr:hover {
+    background-color: #000;
+}
+
+.timestamp {
+    color: #666;
+    font-size: 0.85em;
+}
+.edit-description {
+    font-style: italic;
+}
+
+
+.groupViewMain4 {
+    width: 1000px;
+    margin: 20px;
+    background-color: #0a0c1b;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+/* Add to your groupView.css file */
+
+.user-addition-panel {
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.user-addition-panel h3 {
+    color: #fff; /* White color for the header */
+    margin-bottom: 10px;
+}
+
+.user-addition-panel input[type="text"] {
+    width: calc(100% - 42px); /* Subtract button width and margin */
+    padding: 10px;
+    margin-right: 0px;
+    border-radius: 5px;
+    border: 1px solid #451ded;
+    background-color: #0a0c1b; /* Dark theme input field */
+    color: #fff; /* White text color */
+}
+
+.user-addition-panel button {
+    padding:10px;
+    height: 38px;
+    width: 35px;
+    background-color: #451ded; /* Purple button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.user-addition-panel #userSearchResults {
+    margin-top: 10px;
+    background-color: #1c1f2a; /* Slightly different background for contrast */
+    border-radius: 5px;
+    max-height: 150px; /* Set a max height */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 5px;
+}
+
+.user-search-results {
+    display: none; /* Hidden by default */
+}
+
+/* Example user result item */
+.user-search-result {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.user-search-result:last-child {
+    border-bottom: none;
+}
+
+.user-search-result:hover {
+    background-color: #292d3e; /* Slightly lighter on hover */
+}
+
+.user-search-result .username {
+    color: #fff; /* White text color */
+}
+
+.user-search-result .add-user-button {
+    padding: 5px 10px;
+    background-color: #4CAF50; /* Green color for add button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Position to the right */
+}
+
+.user-search-result .add-user-button:hover {
+    background-color: #43A047; /* Darker green on hover */
+}
+
+
+.modButton {
+    background-color: #451ded;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.modButton:hover {
+    background-color: #8e0ce3;
+}
+
+/* Specific to moderation panel */
+.groupViewMain4 .moderation-panel {
+    padding: 20px;
+    background-color: #0a0c1b; /* Dark theme background */
+}
+
+.groupViewMain4 h2, .groupViewMain4 h3 {
+    border-bottom: 1px solid #8e0ce3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.groupViewMain4 label {
+    margin-right: 10px;
+}
+
+#searchUserButton{
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #151a30; /* Slightly lighter background for input fields */
+    color: #fff;
+    border: 1px solid #451ded;
+    border-radius: 5px;
+    width: 96%;
+}
+
+.groupViewMain4 select, .groupViewMain4 input[type="checkbox"] {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #151a30; /* Slightly lighter background for input fields */
+    color: #fff;
+    border: 1px solid #451ded;
+    border-radius: 5px;
+}
+
+.groupViewMain4 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.groupViewMain4 table th, 
+.groupViewMain4 table td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+.groupViewMain4 .activity-log .timestamp, 
+.groupViewMain4 .activity-log .edit-description {
+    color: #aaa; /* Lighter text for less important data */
+}
+
+/* For dynamic sections like role management and user removal */
+.groupViewMain4 .moderation-panel > div {
+    margin-bottom: 80px;
+}
+
+.groupViewMain4 .moderation-panel .role-management button,
+.groupViewMain4 .moderation-panel .message-deletion button.delete-message,
+.groupViewMain4 .moderation-panel .user-removal button.remove-user,
+.groupViewMain4 .moderation-panel .block-users button.block-user {
+    margin-top: 10px; /* Spacing above buttons */
+    display: inline-block; /* Align buttons next to each other */
+    background-color: #451ded;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.groupViewMain4 .content-filter {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.groupViewMain4 .content-filter #content-filter-toggle {
+    margin-left: 10px;
+}
+
+
+canvas {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .controls {
+    margin-bottom: 10px;
+  }
+
+
+.memTitle{
+    color: #fff; /* Dark grey color */
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.selectorButtonsDiv
+{
+    margin: auto;
+    width: 80%;
+    height: 10%;
+    text-align:center;
+    margin-top: 1%;
+}
+
+.allUnreadButton
+{
+    width: 45%;
+    height: 50%;
+    margin:20px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.messagesDiv
+{
+    background-color: #0a0c1b;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding-top: 20px;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow-y:scroll;
+}
+
+.messageNotification
+{
+    width: 95%;
+    height: 15%;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    align-content: center;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    cursor:pointer;
+    position:relative;
+}
+
+.messagesAvatar
+{
+    width:90px;
+    height:100px;
+    background-color: #0a0c1b;
+    top: 50%;
+    margin-left: 5px;
+}
+
+.messagesUsername
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    position:absolute;
+    margin-left: 120px;
+    margin-bottom: 70px;
+}
+
+.lastMessageContent
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    color: grey;
+    margin-top: 50px;
+    margin-left:150px;
+    position:absolute;
+}
+
+.messageDate
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    position:absolute;
+    margin-left: 1000px;
+    margin-bottom: 70px;
+    color:grey;
+}
+
+.notificationIcon
+{
+    width:40;
+    height:40;
+    position:absolute;
+    float:right;
+    margin-left: 1075px;
+}
+
+.messageWindow
+{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    background-color: white;
+    position:relative;
+}
+
+.messageContainer
+{
+    width: 60%;
+    float:left;
+    height: 50px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    position:relative;
+}
+
+.messageContainerUser
+{
+    width: 60%;
+    float:right;
+    height: 50px;
+    background-color: #b483fe;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position:relative;
+}
+
+.messageHeader
+{
+    background-color: rgb(109, 109, 109);
+    width:100%;
+    margin:auto;
+    height: 130px;
+    margin-bottom: 15px;
+}
+
+.messages
+{
+    width:90%;
+    height: 400px;
+    background-color:rgb(207, 207, 207);
+    overflow-y: scroll;
+    position:relative;
+    margin: auto;
+}
+
+.messageTimeSent
+{
+    float:left;
+    position:relative;
+    margin:auto;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.messageTimeSentUser
+{
+    float:right;
+    position:relative;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.closeMessageButton
+{
+    float:right;
+    margin-right: 10px;
+    margin-top:10px;
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size:25px;
+    position:relative;
+    cursor:pointer;
+}
+
+.msgContainerAvatar
+{
+    height: 80px;
+    width: 75px;
+    background-color: rgb(141, 138, 138);
+    border: 5px solid rgb(141, 138, 138);
+    position:relative;
+    float:left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.messageHeaderUsername
+{
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size: 40px;
+    color:white;
+    position: relative;
+    text-align:center;
+    top:35%;
+}
+
+.messageContent
+{
+    font-family: "Franklin Gothic", "sans-serif";
+    color:white;
+    margin-left: 10px;
+    margin:top 10px;
+}
+
+.messageInput
+{
+    width: 70%;
+    height: 30px;
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size:20px;
+    margin-left:5px;
+    float:left;
+}
+
+.sendMessageButton
+{
+    width:7%;
+    height:50px;
+    background-color: #b483fe;
+    margin-left: 5px;
+    cursor:pointer;
+    float:left; 
+}
+
+.sendMessageContainer
+{
+    width:90%;
+    height:50px;
+    margin:auto;
+    margin-top:10px;
+}
+
+
+
+.mesSec {
+    display: flex;
+    height: 90vh; /* Adjust as needed */
+    width: 100%;
+    margin-top: -10px;
+}
+
+.sidebar {
+    width: 25%; /* Adjust as needed */
+    background-color: #000;
+    border-right: 1px solid #ddd;
+    padding: 20px 20px;
+}
+
+.search-bar {
+    position: relative;
+    left: 15px;
+    width: 90%;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color:#000;
+    background: #9750e9;
+}
+.search-bar input::placeholder{
+    color: #fbffff;
+}
+.search-bar button i{
+    position: relative;
+}
+.search-bar button {
+    position: absolute;
+    background: transparent;
+    left: 285px;
+    bottom: 28px;
+}
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background-color: #0a0c1b;
+    width: 95%;
+    position: relative;
+    right: 10px;
+    height: 65%;
+    margin: auto;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow-y:scroll;
+}
+
+.user-list .user {
+    width: 95%;
+    color: #000;
+    height: 22%;
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    align-content:center;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    cursor:pointer;
+    position:relative;
+}
+.user-list .user:hover{
+    background: #9750e9;
+}
+.user-list .user .up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.user-list .user .up .lastMessageContent
+{
+    right: 130px;
+    bottom: 35px;
+    width: 100px;
+    font-family:"Franklin Gothic", "sans-serif";
+    color: grey;
+    position: relative;
+}
+
+.user-list .user img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    background-color: #0a0c1b;
+    top: 50%;
+    border-radius: 50%;
+}
+.user-list .user .up h4{
+    margin-left: 20px;
+    position: relative;
+    top: 0px;
+}
+
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    color: #fbffff;
+}
+
+.chat-header {
+    padding: 20px;
+    background-color: #000;
+    /*background-image: linear-gradient(315deg, #9750e9 0%, #000000 60%);*/
+    
+    border-bottom: 1px solid #ddd;
+}
+
+.user-infop{
+    display: flex;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Franklin Gothic', sans-serif;
+}
+.user-infop h3{
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+.user-infop img{
+    position: relative;
+    top: 10px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 50%;
+}
+
+.message-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #000;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+   background-color: #000;
+   /*background-image: linear-gradient(315deg, #9750e9 0%, #000000 60%);*/
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer .emoji-btn,
+.chat-footer .attachment-btn,
+.chat-footer .send-btn {
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+    font-family: 'Franklin Gothic', sans-serif;
+    color: #fbffff;
+}
+.chat-footer .attachment-btn{
+    margin-left: 10px;
+}
+
+.media-attachment {
+    max-width: 200px; /* or any size you prefer */
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.chat-footer .message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.my-message {
+    justify-content: flex-end;
+}
+
+.their-message {
+    justify-content: flex-start;
+}
+.theirMessage{
+    display: flex;
+}
+.messageDate
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    position:relative;
+    margin-left: 0;
+    margin-bottom: 0;
+    bottom: 5px;
+    left: 10px;
+    background: #000;
+    color:white;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.message-content {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 15px;
+}
+
+/* Add this to your CSS to handle messages sent by the user */
+.my-message .profile-pic {
+    order: 2; /* Puts the profile pic after the message content */
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.my-message .message-content {
+    font-family: 'Franklin Gothic', sans-serif;
+    background: #9750e9;
+    color: white;
+}
+
+/* Add this to your CSS to visually separate messages from different people */
+.their-message .message-content {
+    /*font-family: 'Beon', sans-serif;
+    background: #9750e9;*/
+    background-color: grey;
+    /*background: #8FB8CA;*/
+    /*background: #ffae42;*/
+}
+
+
+.helpsec {
+    font-family: 'Beon', sans-serif;
+    margin: 2em;
+    padding: 30px 30px;
+    background: linear-gradient(315deg, #9750e9 0%, #000000 30%);
+    border-radius: 8px;
+    color: #fbffff;
+}
+.conlink{
+    position: relative;
+    top: 50%;
+    left: 34.6%;
+    color: #fbffff;
+}
+.conlink a{
+    color: #fbffff;
+    text-decoration: none;
+}
+.conlink a:hover{
+    color: #9750e9;
+}
+
+.helpsec h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 1em;
+}
+
+.faq-question {
+    font-family: 'Franklin Gothic', sans-serif;
+    padding: 0.5em;
+    width: 100%;
+    text-align: left;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question[aria-expanded="true"] {
+    background-color: #9750e9;
+}
+
+.faq-answer {
+    font-family: 'Franklin Gothic', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    padding: 0 1em;
+    border-radius: 4px;
+}
+
+.faq-answer p {
+    margin: 0.5em 0;
+}
+
+/* Initial state of answers is hidden */
+/* When question is clicked, add a class that shows the answer */
+.faq-answer.show {
+    max-height: 1000px; /* large enough to fit content */
+    padding: 1em;
+}
+
+/* Add this CSS to style the filter buttons */
+.filter-buttons {
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    
+}
+
+.filter-buttons button {
+    width: 150px;
+    height: 50%;
+    margin: 15px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.filter-buttons button:hover {
+    background-color: #0056b3; /* Change this color to your desired hover color */
+}
+
+
+.textContainer{
+    width: 1000px;
+    margin: 20px;
+    background-color: #0a0c1b;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.textOptions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.textOptions select{
+    padding: 7px;
+    border: 1px solid #020929;
+    border-radius: 3px;
+}
+
+/* .textOptions label, .textOptions select{
+    font-family: "Poppins", sans-serif;
+} */
+
+.clInput{
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.clInput input[type="color"] {
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+}
+
+#inputText{
+    margin-top: 30px;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    height: 100%;
+}
+
+.active{
+    background-color: #e0e9ff;
+}
+
+#createPad{
+    float: right;
+}

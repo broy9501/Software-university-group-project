@@ -1,0 +1,1567 @@
+html{
+    background: #00060b;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'figtree', sans-serif;
+}
+
+.imgnav{
+    display: flex;
+    align-items: center;
+}
+
+.snav{
+    margin: 0 25px;
+    border-radius: 10px;
+    /*background: #8e0ce3;*/
+    /*background: linear-gradient(0deg, #1a1a1a, #8e0ce3);*/
+    background: linear-gradient(0deg, #451ded, #8e0ce3);
+    padding: 15px 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+/*#searchResults{
+    margin: 0 auto;
+    position: relative;
+    left: 45%;
+}*/
+
+#searchResults {
+    position: relative;
+    left: 35%;
+    margin: 0 auto;
+    width: 30%; /* Adjust the width as necessary */
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Allow scrolling within the container */
+    position: absolute;
+    z-index: 1000; /* Ensure it's above other content */
+    background: #ffffff; /* Choose a background color that fits the theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    font-family: 'Arial', sans-serif; /* Modern, readable font */
+}
+
+#searchResults div {
+    padding: 10px 15px; /* Spacing inside each result */
+    border-bottom: 1px solid #f0f0f0; /* Separator between results */
+    cursor: pointer; /* Indicates the item is clickable */
+    background-color: #8e0ce3;
+}
+
+#searchResults div a{
+    text-decoration: none;
+    color: black;
+}
+
+#searchResults div:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+#searchResults div:hover {
+    background-color: #f8f8f8; /* Highlight on hover */
+}
+
+
+.searchnav {
+    position: relative;
+    margin: 10px auto;
+    max-width: 400px;
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.searchnav input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Beon', sans-serif;
+}
+
+.searchnav button {
+    position: absolute;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#searchBtn {
+    right: 2px;
+    width: 40px;
+    height: 32px;
+    color: #fbffff;
+   /* background: #000;*/
+    background: transparent;
+    border-radius: 50%;
+}
+#searchBtn {
+    color: #8e0ce3;
+}
+
+#clearBtn {
+    right: -50px;
+    background: #fbffff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 40px;
+    height: 30px;
+
+}
+
+#clearBtn i {
+    /*color: #fbffff;*/
+    color: #8e0ce3;
+}
+
+.mainnav{
+    margin: 15px 25px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid white ; /*want to remove this from login and signup pages, gotta figure that out somehow*/
+}
+
+.navigation{
+    height: 20%;
+}
+
+.mainnav .navi a{
+
+    color: #fcfcfb;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.5 ease-in-out;
+}
+
+.mainnav .navi a:hover{
+    border-bottom: 2px solid #8e0ce3;
+}
+
+.mainnav .navi button{
+    color: #fcfcfb;
+    margin: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.mainnav .imgnav img{
+    width: 125px;
+    height: 125px;
+}
+
+.header, .header2{
+    display: flex;
+    justify-content: space-between;
+    color: #fcfcfb;
+    margin-top: 100px;
+}
+
+.header .head, .header2 .head2{
+    width: 75%;
+    margin: 15px 25px 10px;
+    margin-left: 50px;
+    color: #fcfcfb;
+}
+
+.header .head h1, .header2 .head2 h1{
+    letter-spacing: 1.5px;
+}
+
+.header .head p, .header2 .head2 p{
+    letter-spacing: 1px;
+    line-height: 35px;
+    width: 100%;
+}
+
+.header .head button, .header2 .head2 button{
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    padding: 5px 10px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.header .head a, .header2 .head2 a{
+    color: #fcfcfb;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 16px;;
+}
+
+.header .headimg img, .header .headimg video, .header2 .headimg2 img{
+    width: 600px;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 15px 25px 10px;
+    margin-right: 35px;
+}
+
+.header1 {
+    /*background-color: #151829; /* Assuming a dark theme based on the image */
+    background: linear-gradient(180deg, #1b1e31, #0e1021);
+    color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin: 100px auto;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(14, 16, 33, 0.7), /* Inner darker shadow */
+                0 4px 8px 0 rgba(27, 30, 49, 0.5); /* Outer lighter shadow */
+}
+
+.mainbox {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    width: 70%;
+    margin: 0 auto;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(180deg, #1b1e31, #0e1021);
+    box-shadow: 0 8px 16px 0 rgba(14, 16, 33, 0.7), /* Inner darker shadow */
+                0 4px 8px 0 rgba(27, 30, 49, 0.5); /* Outer lighter shadow */
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 23%;
+    height: 32%;
+    /*transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease;*/
+    transition: background-color 0.3s ease 0.2s, 
+        border 0.3s ease 0.2s, 
+        transform 0.3s ease 0.2s; /* Add a 0.2s delay */
+}
+
+.box:hover {
+    background: hsl(231, 32%, 12%); 
+    border: 1px solid #8a2be2;
+    transform: translateY(-5px);
+}
+
+.box h3, .box p {
+    transition: opacity 0.3s ease 0.2s; /* Add a 0.2s delay */
+}
+
+.box:hover h3{
+    /*display: none;*/
+    opacity: 0;
+}
+
+.box p{
+    font-size: 1em;
+    line-height: 1.2;
+    opacity: 0;
+    position: absolute; /* Position it over the h3 */
+    width: 100%;
+    text-align: center;
+}
+
+.box:hover p{
+    opacity: 1;
+}
+
+.box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    right: 10px;
+    position: relative;
+    color: #8e0ce3;
+}
+
+.box:hover i{
+    display: none;
+}
+
+.box h3 {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+
+.header2 .headimg2 iframe{
+    width: 600px;
+    height: 280px;
+    border-radius: 20px;
+    margin: 60px 25px 10px;
+    margin-right: 35px;
+}
+
+footer {
+    background: linear-gradient(180deg, #1b1e31, #0e1021);
+    color: #fcfcfb;
+    padding: 20px 0;
+    font-family: 'railway', sans-serif;
+    margin-top: 100px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.socialIcons{margin-bottom: 30px;}
+
+.socialIcons a {
+    color: #fcfcfb;
+    margin: 0 15px;
+    font-size: 24px; /* Adjust the size of the icons as needed */
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: #8e0ce3; /* Highlight color when hovering over icons */
+}
+
+.footerNav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footerNav ul li {
+    margin: 0 10px;
+}
+
+.footerNav ul li a {
+    color: #fcfcfb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerNav ul li a:hover {
+    color: #8e0ce3; /* Highlight color when hovering over links */
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.designerfooter {
+    color: #8e0ce3;
+    font-weight: bold;
+}
+
+/* Optional: Clearfix for the footer in case of floating elements */
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.compname h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.otherbutton{
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    color: white;
+    padding: 5px 10px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.inversebutton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #451ded, #8e0ce3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inversebutton:hover {
+    background: linear-gradient(45deg, #8e0ce3, #451ded);
+}
+
+.error-message {
+    color: #ff3860;
+    background: #ff386022;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.loginDiv label, .signUpDiv label{
+    color: white;
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+
+.loginDiv .otherbutton, .signUpDiv .otherbutton {
+    background: none;
+    color: #8e0ce3;
+    border: 2px solid #8e0ce3;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.loginDiv .otherbutton:hover, .signUpDiv .otherbutton:hover {
+    background: #8e0ce3;
+    color: white;
+}
+
+.loginTextBox {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginTextBox:focus {
+    outline: none;
+    border-bottom: 2px solid #8e0ce3;
+}
+
+.loginTextBox::placeholder {
+    color: rgb(160, 160, 160);
+}
+
+::placeholder
+{
+    color: rgb(160, 160, 160);
+}
+
+/*CSS FOR LOGIN.HTML AND SIGNUP.HTML ######################################################################################################################################*/
+
+.loginDiv{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    margin-top: 50px;
+    padding: 3rem;
+    background: rgba(10, 12, 27, 0.8);
+    border-radius: 15px;
+    border: 1px solid #451ded;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.signUpDiv{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    margin-top: 130px;
+    padding: 3rem;
+    background: rgba(10, 12, 27, 0.8);
+    border-radius: 15px;
+    border: 1px solid #451ded;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*CSS FOR MESSAGES.HTML ####################################################################################################################################################*/
+
+.selectorButtonsDiv
+{
+    margin: auto;
+    width: 80%;
+    height: 10%;
+    text-align:center;
+    margin-top: 1%;
+}
+
+.allUnreadButton
+{
+    width: 45%;
+    height: 50%;
+    margin:20px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+}
+
+.messagesDiv
+{
+    background-color: #0a0c1b;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding-top: 20px;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow-y:scroll;
+}
+
+.messageNotification
+{
+    width: 95%;
+    height: 15%;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    align-content: center;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    cursor:pointer;
+    position:relative;
+}
+
+.messagesAvatar
+{
+    width:90px;
+    height:100px;
+    background-color: #0a0c1b;
+    top: 50%;
+    margin-left: 5px;
+}
+
+.messagesUsername
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    position:absolute;
+    margin-left: 120px;
+    margin-bottom: 70px;
+}
+
+.lastMessageContent
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    color: grey;
+    margin-top: 50px;
+    margin-left:150px;
+    position:absolute;
+}
+
+.messageDate
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    position:absolute;
+    margin-left: 1000px;
+    margin-bottom: 70px;
+    color:grey;
+}
+
+.notificationIcon
+{
+    width:40;
+    height:40;
+    position:absolute;
+    float:right;
+    margin-left: 1075px;
+}
+
+.messageWindow
+{
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    background-color: white;
+    position:relative;
+}
+
+.messageContainer
+{
+    width: 60%;
+    float:left;
+    height: 50px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    position:relative;
+}
+
+.messageContainerUser
+{
+    width: 60%;
+    float:right;
+    height: 50px;
+    background-color: #b483fe;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position:relative;
+}
+
+.messageHeader
+{
+    background-color: rgb(109, 109, 109);
+    width:100%;
+    margin:auto;
+    height: 130px;
+    margin-bottom: 15px;
+}
+
+.messages
+{
+    width:90%;
+    height: 400px;
+    background-color:rgb(207, 207, 207);
+    overflow-y: scroll;
+    position:relative;
+    margin: auto;
+}
+
+.messageTimeSent
+{
+    float:left;
+    position:relative;
+    margin:auto;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.messageTimeSentUser
+{
+    float:right;
+    position:relative;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.closeMessageButton
+{
+    float:right;
+    margin-right: 10px;
+    margin-top:10px;
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size:25px;
+    position:relative;
+    cursor:pointer;
+}
+
+.msgContainerAvatar
+{
+    height: 80px;
+    width: 75px;
+    background-color: rgb(141, 138, 138);
+    border: 5px solid rgb(141, 138, 138);
+    position:relative;
+    float:left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.messageHeaderUsername
+{
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size: 40px;
+    color:white;
+    position: relative;
+    text-align:center;
+    top:35%;
+}
+
+.messageContent
+{
+    font-family: "Franklin Gothic", "sans-serif";
+    color:white;
+    margin-left: 10px;
+    margin:top 10px;
+}
+
+.messageInput
+{
+    width: 85%;
+    height: 50px;
+    font-family: "Franklin Gothic", "sans-serif";
+    font-size:20px;
+    margin-left:60px;
+    float:left;
+}
+
+.sendMessageButton
+{
+    width:7%;
+    height:50px;
+    background-color: #b483fe;
+    margin-left: 5px;
+    cursor:pointer;
+    float:left; 
+}
+
+.sendMessageContainer
+{
+    width:90%;
+    height:50px;
+    margin:auto;
+    margin-top:10px;
+}
+/*CSS FOR PROFILE.HTML #####################################################################*/
+.profileContainer
+{
+    background-color:#0a0c1b;
+    border: 5px solid white;
+    height:87%;
+    width:80%;
+    margin:auto;
+    border-radius:5px;
+    margin-top:85px;
+}
+
+.followerCount, .followingCount{
+    color: #fff;
+    position: relative;
+    left: 30%;
+}
+
+.profileRealName
+{
+    color:white;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size:50px;
+    margin-left: 30px;
+    margin-bottom:0%;
+    width: 30%;
+}
+
+.profileUsername
+{
+    color:white;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size:20px;
+    margin-left: 30px;
+    margin-top:10px;
+    width: 3%;
+}
+
+.profileAvatar
+{
+    height:300px;
+    width:250px;
+    margin-left: 30px;
+    border:2px solid white;
+    border-radius:5px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.profileAboutMe
+{
+    margin-top: 10px;
+    color:white;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size: 30px;
+    float:right;
+    margin-right: 40%;
+    margin-bottom: 5px;
+}
+
+.profileAboutMeContent
+{
+    background-color:#0a0c1b;
+    border: 2px solid white;
+    border-radius:5px;
+    font-family:"Franklin Gothic", "sans-serif";
+    color:white;
+    padding: 10px;
+    margin-top: 5px;
+    width:50%;
+    float:right;
+    margin-right: 17%;
+    height: 50px;
+}
+
+.profileGroupsLabel
+{
+    margin-top: 10px;
+    color:white;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size: 30px;
+    float:right;
+    margin-right: 40%;
+    margin-bottom: 5px;
+}
+
+.profileGroupsContainer
+{
+    background-color:#0a0c1b;
+    border: 2px solid white;
+    border-radius:5px;
+    font-family:"Franklin Gothic", "sans-serif";
+    color:white;
+    margin-top: 5px;
+    width:50%;
+    float:right;
+    margin-right: 17%;
+    height: 125px;
+    overflow-x:scroll;
+    display:flex;
+    flex-shrink:0;
+}
+
+.profileGroup
+{
+    margin: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius:5px;
+    cursor:pointer;
+    float:left;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size:12px;
+    color:white;
+    flex-shrink:0;
+    text-align:center;
+    border:1px solid white;
+}
+
+.profileGroup img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.profileGroup span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.editProfileButton
+{
+    float:right;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    position:absolute;
+    top: 300px;
+    right: 300px;
+}
+
+.logoutButton
+{
+    float:right;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    position:absolute;
+    top: 300px;
+    right: 180px;
+}
+
+.profileButtonsContainer
+{
+    width: 100%;
+    height: 130px;
+    margin:auto;
+    margin-top:30px;
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
+}
+
+.profileMessageButton
+{
+    margin:2.5px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    height: 120px;
+    width:120px;
+    margin-right:10px;
+}
+
+.proMessButton{
+    color: #fcfcfb;
+    text-decoration: none;
+}
+
+.profileMessageButton, .profileFollowButton{
+    position: relative;
+    right: 112px;
+}
+
+.profileFollowButton
+{
+    margin:2.5px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    height: 120px;
+    width:120px;
+    margin-right:10px;
+}
+
+.profileCopyEmailButton
+{
+    margin:2.5px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    height: 120px;
+    width:120px;
+    margin-right:10px;
+}
+
+.profileInviteButton
+{
+    margin:2.5px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #8e0ce3;
+    height: 120px;
+    width:120px;
+    margin-right:10px;
+}
+
+.profileBlockButton, .profileUnblockButton
+{
+    margin:2.5px;
+    font-family: "Franklin Gothic", "sans-serif";
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fcfcfb;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    font-family: 'railway', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: linear-gradient(150deg, #9c0505, #f00a0a);
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: #e30c0c;
+    height: 120px;
+    width:120px;
+    margin-left:500px;
+    position: relative;
+    left: 120px;
+}
+
+#editProfileForm, #createImagePost, #createTextPost {
+    background-color:#0a0c1b;
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 78%;
+    border: 5px solid white;
+    display: none; /* Hidden by default */
+}
+
+#editProfileForm label, #createImagePost label, #createTextPost label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#editProfileForm input[type="file"], #editProfileForm input[type="text"], #editProfileForm textarea, 
+#createImagePost input[type="file"], #createImagePost input[type="text"], #createImagePost textarea,
+#createTextPost input[type="file"], #createTextPost input[type="text"], #createTextPost textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#editProfileForm input[type="submit"], #createTextPost input[type="submit"], #createImagePost input[type="submit"] {
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#editProfileForm input[type="submit"]:hover, #createTextPost input[type="submit"]:hover, #createImagePost input[type="submit"]:hover {
+    background-color: #3f51b5;
+}
+
+#profileImagePreview {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Optional: Clearfix for .profileContainer */
+.profileContainer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Adjustments for the preview texts */
+#fullNamePreview,
+#aboutMePreview {
+    color: #fff;
+    background-color: #eaeaea;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/*CSS FOR FEED.HTML ###################################################################*/
+.feedContainer
+{
+    width: 90%;
+    height: 77%;
+    border-radius: 10px;
+    margin:auto;
+    overflow-y:scroll;
+}
+
+.feedItem
+{
+    width:90%;
+    height:500px;
+    border:5px solid white;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    background:#0a0c1b;
+    display:flex;
+}
+
+.commentsContainer
+{
+    width: 250px;
+    height: 100%;
+    border-right: 5px solid white;
+    background: #0a0c1b;
+    /* background: rgba(211, 211, 211, 0.829); */
+    flex-shrink: 0;
+}
+
+.commentsHeader
+{
+    text-align:center;
+    padding-top: 10px;
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size: 20px;
+    padding-bottom:5px;
+    color: white;
+}
+
+.commentsScrollBox
+{
+    width: 95%;
+    height: 80%;
+    border-radius: 5px;
+    margin-top: 20px;
+    /* background: lightgrey; */
+    margin: auto;
+    background: #0a0c1b;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+
+.comment
+{
+    margin:auto;
+    width:95%;
+    height:fit-content;
+    border-radius:5px;
+    background:white;
+    font-size:15px;
+}
+
+.messageInput
+{
+    height:30px;
+    width: 70%;
+    margin:auto;
+    font-size: 15px;
+    margin-left:5px;
+    border-radius:5px;
+    
+}
+
+.sendCommentButton
+{
+    height: 30px;
+    width:60px;
+    margin-left:5px;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.messageInputContainer
+{
+    margin-top:10px;
+}
+
+.commentInfo
+{
+    margin-top:10px;
+    display:flex;
+}
+
+.commentAvatar
+{
+    height:20px;
+    width:15px;
+    margin-bottom:5px;
+    margin-left:5px;
+}
+
+.commentUsername
+{
+    font-size: 13px;
+    margin-top:auto;
+    margin-bottom:auto;
+    color: white;
+    margin-left:10px;
+    font-weight:bold;
+}
+
+.postContent
+{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.postImage
+{
+    object-fit:cover;
+    margin:auto;
+    /* flex: 1 1 1;
+    order:1; */
+    height:75%;
+}
+
+.postText
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    font-size:30px;
+    color:white;
+    margin:auto;
+    flex: 1 1 1;
+    height:auto;
+    width:100%;
+    order:1;
+    text-align:center;
+}
+
+.postTextContainer
+{
+    height:75%;
+    width:100%;
+    display:flex;
+    align-items:middle;
+}
+
+.posterInfo {
+    color: #fff;
+    border-top: 5px solid white;
+    background: #0a0c1b;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* Add this to space out children elements */
+}
+
+.postInfoUsernameAvatar {
+    display: flex;
+    align-items: center;
+    /* width: 20%; */
+    /* Control the size and margin as needed, removed fixed height and width */
+}
+
+.posterAvatar {
+    height: 60px; /* Adjust size as needed */
+    object-fit: cover;
+    object-position: 50% 25%;
+    width: 60px;
+    margin-right: 10px; /* Add margin to separate from username */
+    border-radius: 50%; /* To make it round */
+}
+
+.posterUsername {
+    color: white;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+.postCaption {
+    flex-grow: 1; /* This allows it to grow and shrink as needed */
+    padding: 0 15px; /* Add padding on the sides */
+    position: relative;
+    left: 10%;
+    width: 20%;
+}
+
+.postCaptionText {
+    font-size: 14px; /* Adjust font size as needed */
+    color: white;
+    text-align: left; /* Align to the left */
+}
+
+.DateLikeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns items */
+    width: 12%;
+    position: relative;
+    bottom: 20px;
+}
+
+.postDate {
+    /* Removed float, used flexbox for positioning */
+    margin-bottom: 5px; /* Add margin between date and button */
+}
+
+.likeButton {
+    padding: 5px 10px; /* Adjust padding as needed */
+    background-color: #4CAF50; /* Adjust to your desired color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Add more styles as needed */
+}
+
+/*CSS FOR NOTIFICATIONS.HTML ###################################################################*/
+
+.notificationContainer
+{
+    width: 90%;
+    height: 77%;
+    border-radius: 10px;
+    margin:auto;
+    overflow-y:scroll;
+}
+
+.notificationItem
+{
+    width:90%;
+    height:222px;
+    border:5px solid white;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    cursor:pointer;
+    display:flex;
+}
+
+.notification
+{
+    width:100%;
+    height:222px;
+    float:right;
+    bottom:0;
+    flex: 0 0 auto;
+    bottom:0;
+    display:flex;
+    background-color:#0a0c1b
+}
+
+.notificationContentContainer
+{
+    width:100%;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.notificationAvatar
+{
+    height:100px;
+    width:80px;
+    margin-top:50px;
+    margin-left:40px;
+    flex: 0 0 auto;
+}
+
+.notificationUsername
+{
+    font-family:"Franklin Gothic","sans-serif";
+    color:white;
+    font-size:20px;
+    margin-left:20px;
+    margin-top:100px;
+    font-weight:bold;
+    flex: 0 0 auto;
+    width:200px;
+}
+
+.notification-badge {
+    position: relative;
+    top: -15px;
+    left: -8px;
+    background-color: purple;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 2px;
+}
+
+.notificationText
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    color:white;
+    font-size:20px;
+    margin-left:20px;
+    margin-top:100px;
+    flex:0 0 auto;
+    width:300px;
+}
+
+.notificationContent
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    color:white;
+    font-size:20px;
+    margin-left:20px;
+    margin-top:100px;
+    flex:0 0 auto;
+    /* width:300px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.notificationImage
+{
+    width:35px;
+    height:35px;
+    background-color:transparent;
+}
+
+.notificationText
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    color:white;
+    font-size:20px;
+    margin-left:20px;
+    margin-top:100px;
+    flex:0 0 auto;
+    width:300px;
+}
+
+.clearAllButton
+{
+    font-family:"Franklin Gothic", "sans-serif";
+    margin-left:620px;
+    height:50px;
+    width:200px;
+    margin-top:10px;
+    cursor:pointer;
+    border-radius:10px;
+    color: white;
+    font-size:32px;
+    border:2px solid white;
+    background-color:transparent;
+    flex: 0 0 auto;
+    box-shadow: 0px 4px 8px 0px rgba(104, 34, 206, 0.6);
+    background: linear-gradient(150deg, #451ded, #8e0ce3);
+    border-color: #8e0ce3;
+    
+    
+}
+
+.clearNotification
+{
+    margin-left: 50px;
+    height:50px;
+    width:50px;
+    margin-top:90px;
+    cursor:pointer;
+    border-radius:10px;
+    border:2px solid white;
+    background-color:transparent;
+    flex: 0 0 auto;
+}
+
+/*GROUP FILES*/
+.groupSettings{
+    color:white; display:flex; position: relative; left: 70px; top: 0px;
+}
+.groupSettings button{
+    color:white; font-size:x-large; height: 40px; width: 40px; margin-top: 15px; margin-left: 10px;
+}
+.groupbox{
+    margin-top: 50px; padding-bottom: 20px; border: 5px solid #8e0ce3; background: white; margin: 0 auto; border-radius: 10px; max-width: 1320px; display: flex; flex-wrap: wrap; justify-content: space-evenly;
+}
+.groupbox h1{
+    width: 100%; text-align: center; margin-top: 0; padding-top: 20px;
+}
+.groups{
+    position: relative;
+    right: 0px;
+}
+.group{
+    flex: 0 0 calc(33.333% - 40px); /* Three items per row with spacing */ margin: 20px; border: 5px solid #8e0ce3; border-radius: 10px; display: flex; flex-direction: column; align-items: center; overflow: hidden;
+}
+.group a{
+    width: 100%; display: block;
+}
+.group a img{
+    width: 100%; height: 300px; object-fit: cover; object-position: 50% 50%;
+}
+.groupdescription{
+    padding: 10px; text-align: center;
+}
+.groupdescription h2{margin: 0;}
+
+@media only screen and (max-width: 360px) {
+    .loginDiv {
+        width: 60%;
+    }
+    .signUpDiv{
+        width: 70%;
+        height: 80%;
+    }
+  }
+

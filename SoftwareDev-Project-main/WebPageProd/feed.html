@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> CreativSync - Feed</title>
+        <link rel="icon" href="Images/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="navigation">
+            <nav>
+                <div class="mainnav">
+                    <div class="imgnav">
+                        <img src="Images/logo.png">
+                        <div class="compname"><h1 style="color:white;">CreativSync</h1></div>
+                    </div>
+                    <div class="navi">
+                            <a href="feed.html">Feed</a>
+                            <a href="notifications.html">Notifications</a>
+                            <a href="search.html">Search</a> 
+                            <a href="groupFiles.html">Groups</a>
+                            <a href="messages2.php">Messages</a>
+                            <a href="help.html">Help</a>
+                            <button><a href="profile.php">Profile</a></button>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section>        
+            <div class="feedContainer">
+                <div class="feedItem">
+                    <div class="CommentsContainer" >    <!-- COMMENTS SECTION -->
+                        <div class="CommentsHeader">Comments</div>
+                        <div class="CommentsScrollBox">
+
+                            <div class="CommentInfo"> <!-- CONTAINER FOR A COMMENT AND USER AVATAR + NAME -->
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image> <!--avatar for commenter-->
+                                <p class="commentUsername">LarryDavid1996</p>                        <!--username for commenter-->
+                            </div>
+                            <div class="Comment">Hello!</div>                                        <!--comment text-->
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">T.Georgiou420</p>
+                            </div>
+                            <div class="Comment">Awesome post!</div>
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">SusanCartwright</p>
+                            </div>
+                            <div class="Comment">Hey, did you get my message last night about the meeting? Its important!!</div>
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">JCenaUCS</p>
+                            </div>
+                            <div class="Comment">Howdy!! Awesome photo!</div>
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">sampsonJ321</p>
+                            </div>
+                            <div class="Comment">This reminds me of the last time I went on holiday, probably around 10 years ago now?</div>
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">Konstance1</p>
+                            </div>
+                            <div class="Comment">Working hard or hardly working??</div>
+
+                            <div class="CommentInfo">
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">LarryDavid1996</p>
+                            </div>
+                            <div class="Comment">Nice :D</div>
+                        </div>
+                        
+                        <!-- Input for text and the send button for a user to add a comment. -->
+                        <div class = messageInputContainer>
+                            <input class="messageInput">                        <!--text box for inputting message-->
+                            <button class ="sendCommentButton">Send</button>    <!--send comment-->
+                        </div>
+                    </div>
+
+                    <!--Text or image content of a post-->
+                    <div class="postContent">
+                        <Image class="postImage" src="Images/grouplogo4.webp">   <!--image of an image based post, use postImage for an image based post-->
+                        <div class="posterInfo">
+                            <div class="postInfoUsernameAvatar">                 
+                                <image class="posterAvatar" src="Images/defaultAvatar.png"></image> <!--avatar of user that posted the image-->
+                                <p class="posterUsername">oh2002</p>                                <!--username of poster-->
+                            </div>
+                            <div class="postCaption">
+                                <p class="postCaptionText">Here's a little painting I made earlier, just thought I'd share!</p> <!--post caption, a little bit of text to suppliment the post-->
+                            </div>
+                            <div class="DateLikeContainer">
+                                <p class="postDate">02/03/2024</p>          <!--date of post-->
+                                <button class="likeButton">Like</button>    <!--like button, backend code needs added-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedItem">
+                    <div class="CommentsContainer" >    <!-- COMMENTS SECTION -->
+                        <div class="CommentsHeader">Comments</div>
+                        <div class="CommentsScrollBox">
+
+                            <div class="CommentInfo"> <!-- CONTAINER FOR A COMMENT AND USER AVATAR + NAME -->
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">LarryDavid1996</p>
+                            </div>
+                            <div class="Comment">Interesting!</div>
+
+                            <div class="CommentInfo"> <!-- CONTAINER FOR A COMMENT AND USER AVATAR + NAME -->
+                                <image class="CommentAvatar" src="Images/defaultavatar.png"></image>
+                                <p class="commentUsername">PSwift</p>
+                            </div>
+                            <div class="Comment">I should make a post about this!</div>
+                        </div>
+                        
+                        <!-- Input for text and the send button for a user to add a comment. -->
+                        <div class = messageInputContainer>
+                            <input class="messageInput">
+                            <button class ="sendCommentButton">Send</button>
+                        </div>
+                    </div>
+
+                    <!--Text or image content of a post-->
+                    <div class="postContent">
+                        <div class="postTextContainer"> <!--text based post, so postText is used instead of postImage-->
+                            <p class = "postText">Heres is some example text for a text-based post, hopefully everything works okay and the text fits fine. I will scream if it doesnt work properly. blah blah fill out the available space with some perhaps more elongated dialects to see if lengthy words spill over the side.</p>  
+                        </div>
+                        <div class="posterInfo">
+                            <div class="postInfoUsernameAvatar">
+                                <image class="posterAvatar" src="Images/defaultAvatar.png"></image>
+                                <p class="posterUsername">SusanCartwright</p>
+                            </div>
+                            <div class="postCaption">
+                                <p class="postCaptionText">What do you guys think? Am I doing well?</p>
+                            </div>
+                            <div class="DateLikeContainer">
+                                <p class="postDate">02/03/2024</p>
+                                <button class="likeButton">Like</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>
